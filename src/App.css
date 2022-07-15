@@ -1,0 +1,20 @@
+.slider-content {
+   display: flex;
+   overflow-x: hidden;
+   overflow-y: hidden;
+   scroll-behavior: smooth;
+}
+
+.card-slider {
+   flex: 0 0 33.333333333333333%;
+}
+
+.card-slider img {
+   transition: 0.3s ease-in-out;
+   background-position: center center;
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+   opacity: 0.9;
+   padding: 1rem;
+}
