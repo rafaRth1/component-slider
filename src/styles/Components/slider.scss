@@ -1,47 +1,60 @@
-.carousel-two {
-   display: flex;
-   overflow-x: hidden;
-   overflow-y: hidden;
+.slider {
+   overflow: hidden;
    scroll-behavior: smooth;
-   width: 50%;
 }
 
-.card-carousel-two {
+.slider-content {
+   display: flex;
+}
+
+.card-slider {
    flex: 0 0 100%;
+   width: 100%;
+   height: 100%;
+   position: relative;
 }
 
-.card-carousel-two img {
-   transition: 0.3s ease-in-out;
-   background-position: center center;
+.card-slider img {
    object-fit: cover;
-   height: 100%;
+   height: 90%;
    width: 100%;
    opacity: 0.9;
    padding: 1rem;
 }
 
-.active {
-   background-color: red;
+.followers {
+   font-size: 14px;
+   text-align: center;
+   position: relative;
+   margin: 0;
+}
+
+button {
+   margin-top: 100px;
 }
 
 @media screen and (min-width: 768px) {
-   .card-carousel-two {
+   .card-slider {
       flex: 0 0 100%;
       height: 320px;
    }
 }
 
 @media screen and (min-width: 1024px) {
-   .card-carousel-two {
+   .card-slider {
       flex: 0 0 50%;
       height: 320px;
    }
 }
 
 @media screen and (min-width: 1280px) {
-   .card-carousel-two {
-      flex: 0 0 33.33333%;
+   .card-slider {
+      flex: 0 0 calc(100% / 5);
       width: 100%;
-      height: 300px;
+      height: 320px;
    }
+}
+
+.active {
+   background-color: red;
 }

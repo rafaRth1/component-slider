@@ -33,28 +33,24 @@ const Slider = ({ children, arrayImages, points, pages = 2 }: Props) => {
    }, [points]);
 
    const handleLeft = (ancho: any) => {
-      const imageCarousel: any = document.querySelector('.card-carousel-two img');
+      const imageCarousel: any = document.querySelector('.card-slider img');
       const widthImageCarousel: any = imageCarousel?.scrollWidth;
       ancho.current.scrollLeft -= widthImageCarousel;
    };
 
    const handleRight = (ancho: any) => {
-      const imageCarousel: any = document.querySelector('.card-carousel-two img');
+      const imageCarousel: any = document.querySelector('.card-slider img');
       const widthImageCarousel: any = imageCarousel?.scrollWidth;
       ancho.current.scrollLeft += widthImageCarousel;
    };
 
    return (
-      <>{children}</>
-
-      /* <div>
-         <div className='carousel-two' ref={fila}>
-            {arrayImages.map((image: any) => (
-               <div key={image.id} className='card-carousel-two'>
-                  <img src={image.img} alt='Image' />
-               </div>
-            ))}
-         </div>
+      <div>
+         <section className='slider' ref={fila}>
+            <div className='slider-content'>
+               {children}
+            </div>
+         </section>
 
          {points ? <div className='index-pages'></div> : null}
 
@@ -62,7 +58,7 @@ const Slider = ({ children, arrayImages, points, pages = 2 }: Props) => {
             <button onClick={() => handleLeft(fila)}>{'<'}</button>
             <button onClick={() => handleRight(fila)}>{'>'}</button>
          </div>
-      </div> */
+      </div>
    );
 };
 

@@ -48,21 +48,17 @@ function App() {
       },
    ];
 
-   const fila: MutableRefObject<HTMLDivElement> = useRef(null);
-
    return (
       <div className='App'>
          <h1>Test slider</h1>
-         <Slider arrayImages={arrayImages} points={true}>
-            <section className='slider'>
-               <div className='slider-content'>
-                  {arrayImages.map((image) => (
-                     <div key={image.id} className='card-slider'>
-                        <img src={image.img} alt='Image' className='content-card-slider' />
-                     </div>
-                  ))}
+         <Slider arrayImages={arrayImages} points={false}>
+            {arrayImages.map((image) => (
+               <div key={image.id} className='card-slider'>
+                  <img src={image.img} alt='Image' />
+                  <p className='followers'>Name Artist</p>
+                  <p className='followers'>2,333,11 Seguidores</p>
                </div>
-            </section>
+            ))}
          </Slider>
       </div>
    );
